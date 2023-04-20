@@ -47,7 +47,7 @@ class SpeechRecognizer(torch.nn.Module):
 
 
 # Load Wav2Vec2 pretrained model from Hugging Face Hub
-url = "zain2984/my_awesome_asr_mind_model" #"facebook/wav2vec2-base-960h"
+url = "facebook/wav2vec2-base-960h"#"zain2984/my_awesome_asr_mind_model" #"facebook/wav2vec2-base-960h"
 model = Wav2Vec2ForCTC.from_pretrained(url)
 # Convert the model to torchaudio format, which supports TorchScript.
 model = import_huggingface_model(model)
